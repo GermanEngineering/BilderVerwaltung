@@ -13,6 +13,7 @@ UnifyPictureNames.7z
 *.sln
 *.pyproj
 VENV_BilderVerwaltung/
+BilderVerwaltungSlnAsAdmin.bat
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

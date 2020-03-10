@@ -23,7 +23,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BilderVerwaltung.py" />
+    <Compile Include="ChangeCaptureDate.py" />
     <Compile Include="Progress.py" />
+    <Compile Include="ReduceImageFileSize.py" />
+    <Compile Include="SetNameAsCaptureDate.py" />
     <Compile Include="UnifyPictureNames.py" />
   </ItemGroup>
   <ItemGroup>
