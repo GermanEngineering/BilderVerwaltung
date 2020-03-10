@@ -1,7 +1,10 @@
 REM Change to Environment directory.
-cd /d C:\CZ\Projects\UpdateScript\VENV_UpdateScript\Scripts
+cd /d D:\tmp\xxx\Projects\BilderVerwaltung\VENV_BilderVerwaltung\Scripts
 REM Activate Environment and run pyinstaller command
 activate.bat^
- & cd /d c:\CZ\Projects\UpdateScript^
- & pyinstaller -F -i "Icons\UpdateScript.ico" "UpdateScript.py" --version-file=Version.py -n UpdateScript_0.0.0.5^
+ & cd /d D:\tmp\xxx\Projects\BilderVerwaltung^
+ & pyinstaller -F -i "Icons\UnifyPictureNames.ico" "UnifyPictureNames.py" --version-file=Version.py^
+ & pyinstaller -F -i "Icons\SetNameAsCaptureDate.ico" "SetNameAsCaptureDate.py" --version-file=Version.py^
+ & pyinstaller -F -i "Icons\ReduceImageFileSize.ico" "ReduceImageFileSize.py" --version-file=Version.py^
+ & pyinstaller -F -i "Icons\ChangeCaptureDate.ico" "ChangeCaptureDate.py" --version-file=Version.py^
  & PAUSE
