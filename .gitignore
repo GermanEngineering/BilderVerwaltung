@@ -12,6 +12,7 @@ UnifyPictureNames.log
 UnifyPictureNames.7z
 *.sln
 *.pyproj
+VENV_BilderVerwaltung/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
