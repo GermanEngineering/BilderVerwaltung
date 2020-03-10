@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0845b932-264e-48a3-bc27-a63fcc298007</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>BilderVerwaltung.py</StartupFile>
+    <StartupFile>ReduceImageFileSize.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
