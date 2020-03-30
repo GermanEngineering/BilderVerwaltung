@@ -7,9 +7,8 @@ icon.ico
 __pycache__/
 build/
 dist/
-UnifyPictureNames.spec
-UnifyPictureNames.log
-UnifyPictureNames.7z
+*.spec
+*.log
 *.sln
 *.pyproj
 VENV_BilderVerwaltung/
