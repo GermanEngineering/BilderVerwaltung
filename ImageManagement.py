@@ -1,11 +1,6 @@
 import os
-from datetime import datetime
 from shutil import copy2
-
-
-def GetFormattedDatetimeNow():
-	"""Returns the current datetime in format YYYYMMDD_hhmmss"""
-	return datetime.now().strftime("%Y%m%d_%H%M%S")
+import logging
 
 
 def GetUniqueFile(filePath):
@@ -23,15 +18,18 @@ def GetUniqueFile(filePath):
 
 def GetInputFolder():
 	"""Asks the user for the input folder name."""
-	inputFolder = input("Please specify the relative input folder name.\nJust press Enter to use the default value \"input\".\n")
+	#inputFolder = input("Please specify the relative input folder name.\nJust press Enter to use the default value \"input\".\n")
+	inputFolder = input("Bitte gib den relativen input-Ordner Namen ein.\nDrücke Enter um die Standard-Einstellung \"input\" zu verwenden.\n")
 	if not inputFolder:
 		inputFolder = "input"
 
 	return inputFolder
 
+
 def GetOutputFolder():
 	"""Asks the user for the input folder name."""
-	outputFolder = input("Please specify the relative output folder name.\nJust press Enter to use the default value \"output\".\n")
+	#outputFolder = input("Please specify the relative output folder name.\nJust press Enter to use the default value \"output\".\n")
+	outputFolder = input("Bitte gib den relativen output-Ordner Namen ein.\nDrücke Enter um die Standard-Einstellung \"output\" zu verwenden.\n")
 	if not outputFolder:
 		outputFolder = "output"
 
@@ -54,3 +52,14 @@ def CopyFile(source, target):
 		os.makedirs(os.path.dirname(target))
 	copy2(source, target)
 
+
+def GetLogger(loggerName):
+	"""Returns logger with the specified name."""
+	logger = logging.getLogger(loggerName)
+	logger.setLevel(logging.INFO)
+	fileHandler = logging.FileHandler(filename="ImageManagement.log")
+	formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(name)s - %(message)s")
+	fileHandler.setFormatter(formatter)
+	logger.addHandler(fileHandler)
+
+	return logger	

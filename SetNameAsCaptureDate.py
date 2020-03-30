@@ -1,21 +1,20 @@
 import os
 from datetime import datetime
-import logging
 import Progress
 import piexif
-import BilderVerwaltung as BV
+import ImageManagement as IM
 
 
 def SetNameAsCaptureDate(inputFolder, outputFolder):
 	processedFiles = 0
 	changedFiles = 0
 	unchangedFiles = 0
-	allFilePaths = BV.GetListOfAllFilePaths(inputFolder)
+	allFilePaths = IM.GetListOfAllFilePaths(inputFolder)
 	for filePath in allFilePaths:
 		inputDirectory, inputFile = os.path.split(filePath)
-		newFilePath = BV.GetUniqueFile(filePath.replace(inputFolder, outputFolder))
+		newFilePath = IM.GetUniqueFile(filePath.replace(inputFolder, outputFolder))
 
-		BV.CopyFile(filePath, newFilePath)
+		IM.CopyFile(filePath, newFilePath)
 
 		if inputFile.lower().endswith((".jpg", ".jpeg")):                
 			try:
@@ -24,7 +23,7 @@ def SetNameAsCaptureDate(inputFolder, outputFolder):
 				try:
 					captureTime = datetime.strptime(inputFile[0:8], "%Y%m%d")
 				except Exception:
-					logging.info("{0} - Unable to set capture time for: \"{1}\"".format(BV.GetFormattedDatetimeNow(), filePath))
+					logger.info("Unable to set capture time for: \"{}\"".format(filePath))
 					continue
 
 			captureTime_string = captureTime.strftime("%Y:%m:%d %H:%M:%S")
@@ -42,19 +41,20 @@ def SetNameAsCaptureDate(inputFolder, outputFolder):
 		processedFiles += 1
 		Progress.PrintProgress(processedFiles)			
 
-	logging.info("{0} - Processed Files: {1} | ChangedFiles: {2} | Unchanged Files: {3}".format(BV.GetFormattedDatetimeNow(), processedFiles, changedFiles, unchangedFiles))
+	logger.info("Processed Files: {} | ChangedFiles: {} | Unchanged Files: {}".format(processedFiles, changedFiles, unchangedFiles))
 
 
 try:
-	logging.basicConfig(filename="SetNameAsCaptureDate.log", level=logging.INFO)
-	logging.info("{0} - ##### Program Start #####".format(BV.GetFormattedDatetimeNow()))
-
-	print("This program will take file names in the format YYYYMMDD_hhmmss and set them as capture date of .jpg images.\n")
-	inputFolder = BV.GetInputFolder()
-	outputFolder = BV.GetOutputFolder()
+	logger = IM.GetLogger("SetNameAsCaptureDate")
+	logger.info("##### Program Start #####")
+	
+	#print("This program will take file names in the format YYYYMMDD_hhmmss and set them as capture date of .jpg images.\n")
+	print("Dieses Program nimmt den Namen von .jpg Bildern im Format YYYYMMDD_hhmmss und setzt diesen als Aufnahmedatum.\n")
+	inputFolder = IM.GetInputFolder()
+	outputFolder = IM.GetOutputFolder()
 	SetNameAsCaptureDate(inputFolder, outputFolder)
+	
+	logger.info("##### Execution Finished #####")
 
-	logging.info("{0} - ##### Execution Finished #####\n".format(BV.GetFormattedDatetimeNow()))
-
-except Exception as e:
-	logging.exception("{0} - {1}".format(BV.GetFormattedDatetimeNow(), e))
+except Exception as ex:
+	logger.exception(ex)

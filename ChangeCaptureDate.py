@@ -1,20 +1,19 @@
 import os
 from datetime import datetime, timedelta
-import logging
 import Progress
 import piexif
-import BilderVerwaltung as BV
+import ImageManagement as IM
 
 
 def ChangeCaptureDate(inputFolder, outputFolder, timeDifferenceInSeconds):
 	processedFiles = 0
 	changedFiles = 0
 	unchangedFiles = 0	
-	allFilePaths = BV.GetListOfAllFilePaths(inputFolder)
+	allFilePaths = IM.GetListOfAllFilePaths(inputFolder)
 	for filePath in allFilePaths:
 		inputDirectory, inputFile = os.path.split(filePath)
-		newFilePath = BV.GetUniqueFile(filePath.replace(inputFolder, outputFolder))
-		BV.CopyFile(filePath, newFilePath)
+		newFilePath = IM.GetUniqueFile(filePath.replace(inputFolder, outputFolder))
+		IM.CopyFile(filePath, newFilePath)
 
 		if inputFile.lower().endswith(('.jpg', '.jpeg')):
 			captureTime = ""
@@ -38,7 +37,7 @@ def ChangeCaptureDate(inputFolder, outputFolder, timeDifferenceInSeconds):
 					unchangedFiles += 1
 
 			except Exception:
-				logging.info("{0} - No capture time found for: \"{1}\"".format(BV.GetFormattedDatetimeNow(), filePath))
+				logger.info("No capture time found for: \"{}\"".format(filePath))
 
 		else:
 			unchangedFiles += 1
@@ -46,26 +45,28 @@ def ChangeCaptureDate(inputFolder, outputFolder, timeDifferenceInSeconds):
 		processedFiles += 1
 		Progress.PrintProgress(processedFiles)
 
-	logging.info("{0} - Processed Files: {1} | ChangedFiles: {2} | Unchanged Files: {3}".format(BV.GetFormattedDatetimeNow(), processedFiles, changedFiles, unchangedFiles))
+	logger.info("Processed Files: {} | ChangedFiles: {} | Unchanged Files: {}".format(processedFiles, changedFiles, unchangedFiles))
 
 
-try:
-	logging.basicConfig(filename="ChangeCaptureDate.log", level=logging.INFO)
-	logging.info("{0} - ##### Program Start #####".format(BV.GetFormattedDatetimeNow()))
-
-	print("This program will adapt the capture date of .jpg images by the specified time difference.\n")
-	inputFolder = BV.GetInputFolder()
-	outputFolder = BV.GetOutputFolder()
-	timeDifferenceInSeconds = input("Please enter the time difference in seconds.\nJust press Enter to use the default value: 0.\n")
+try:	
+	logger = IM.GetLogger("ChangeCaptureDate")
+	logger.info("##### Program Start #####")
+	
+	#print("This program will adapt the capture date of .jpg images by the specified time difference.\n")
+	print("Dieses Program verrechnet einen Offset auf die Aufnahmedaten von .jpg Bildern.")
+	inputFolder = IM.GetInputFolder()
+	outputFolder = IM.GetOutputFolder()
+	#timeDifferenceInSeconds = input("Please enter the time difference in seconds.\nJust press Enter to use the default value: 0.\n")
+	timeDifferenceInSeconds = input("Bitte gib den gewünschten Offset in Sekunden an.\nDrücke Enter um den Standard Wert 0 zu verwenden.\n")
 	if not timeDifferenceInSeconds:
 		timeDifferenceInSeconds = 0
 	else:
 		timeDifferenceInSeconds = int(timeDifferenceInSeconds)
 		
 	ChangeCaptureDate(inputFolder, outputFolder, timeDifferenceInSeconds)
+	
+	logger.info("##### Execution Finished #####")
 
-	logging.info("{0} - ##### Execution Finished #####\n".format(BV.GetFormattedDatetimeNow()))
-
-except Exception as e:
-	logging.exception("{0} - {1}".format(BV.GetFormattedDatetimeNow(), e))
+except Exception as ex:
+	logger.exception(ex)
 
