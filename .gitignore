@@ -12,6 +12,7 @@ dist/
 *.sln
 *.pyproj
 VENV_BilderVerwaltung/
+VENV_BilderVerwaltung_T440s/
 BilderVerwaltungSlnAsAdmin.bat
 
 # Byte-compiled / optimized / DLL files
