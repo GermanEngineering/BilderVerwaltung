@@ -27,7 +27,7 @@ def GetInputFolder():
 
 
 def GetOutputFolder():
-	"""Asks the user for the input folder name."""
+	"""Asks the user for the output folder name."""
 	#outputFolder = input("Please specify the relative output folder name.\nJust press Enter to use the default value \"output\".\n")
 	outputFolder = input("Bitte gib den relativen output-Ordner Namen ein.\nDrücke Enter um die Standard-Einstellung \"output\" zu verwenden.\n")
 	if not outputFolder:

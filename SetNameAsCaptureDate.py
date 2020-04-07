@@ -13,7 +13,6 @@ def SetNameAsCaptureDate(inputFolder, outputFolder):
 	for filePath in allFilePaths:
 		inputDirectory, inputFile = os.path.split(filePath)
 		newFilePath = IM.GetUniqueFile(filePath.replace(inputFolder, outputFolder))
-
 		IM.CopyFile(filePath, newFilePath)
 
 		if inputFile.lower().endswith((".jpg", ".jpeg")):                
