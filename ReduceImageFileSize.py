@@ -16,11 +16,13 @@ def ReduceImageFileSize(inputFolder, outputFolder, imageQuality):
 		if inputFile.lower().endswith((".jpg", ".jpeg")):
 			try:
 				img = Image.open(filePath)
+				if not os.path.exists(os.path.dirname(newFilePath)):
+					os.makedirs(os.path.dirname(newFilePath))
 				img.save(newFilePath, quality=imageQuality)                    
 				changedFiles += 1
 
-			except Exception:
-				logger.info("The following file could not be processed: \"{}\"".format(filePath))
+			except Exception as ex:
+				logger.info("The following file could not be processed: \"{}\" - {}".format(filePath, ex))
 
 		else:
 			IM.CopyFile(filePath, newFilePath)

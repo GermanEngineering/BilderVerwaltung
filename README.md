@@ -11,11 +11,11 @@ Setzt den Namen eines Bildes als Aufnahmedatum.
 Ermöglicht es fehlende Aufnahmedaten (zum Beispiel bei WhatsApp Bildern) zu ergänzen.
 1. **Dateigroesse_Reduzieren**<br>
 Reduziert die Dateigröße von Bildern.
-Ermöglicht das platzsparende speichern von Bildern die man sowiso niemals in Leinwandgröße ausdrucken will.
+Ermöglicht das platzsparende Speichern von Bildern die du sowieso niemals in Leinwandgröße ausdrucken willst.
 
 ***
 ## Download der Programme:
-Du kannst dir alle Programme kostenlos auf meiner Website runterladen: [Bilder Verwaltung] (https://...)
+Du kannst dir alle Programme kostenlos auf meiner Website runterladen: [Bilder Verwaltung] (https://...)<br>
 Den Quellcode findest du auf GitHub: [Bilder Verwaltung] (https://...)
 
 ***
