@@ -15,8 +15,8 @@ Ermöglicht das platzsparende Speichern von Bildern die du sowieso niemals in Le
 
 ***
 ## Download der Programme:
-Du kannst dir alle Programme kostenlos auf meiner Website runterladen: [Bilder Verwaltung] (https://trustmeimanengineer.de/dateinamen-von-bildern-vereinheitlichen/)<br>
-Den Quellcode findest du auf GitHub: [Bilder Verwaltung] (https://github.com/GermanEngineering/BilderVerwaltung)
+Du kannst dir alle Programme kostenlos auf meiner Website runterladen: [Bilder Verwaltung](https://trustmeimanengineer.de/dateinamen-von-bildern-vereinheitlichen/)<br>
+Den Quellcode findest du auf GitHub: [Bilder Verwaltung](https://github.com/GermanEngineering/BilderVerwaltung)
 
 ***
 ## Verwendung der Programme:
@@ -29,7 +29,7 @@ Den Quellcode findest du auf GitHub: [Bilder Verwaltung] (https://github.com/Ger
 ***
 ## Ausführung der Programme:
 1. **Bilder_Namen_Vereineitlichen**<br>
-Die Anwendung des Programmes ist sehr einfach und in [diesem Video] (https://trustmeimanengineer.de/dateinamen-von-bildern-vereinheitlichen/) erklärt.
+Die Anwendung des Programmes ist sehr einfach und in [diesem Video](https://trustmeimanengineer.de/dateinamen-von-bildern-vereinheitlichen/) erklärt.
 ![Bilder Namen Vereinheitlichen](https://trustmeimanengineer.de/wp-content/uploads/Thumbnail_Bilder_Dateinamen_Vereinheitlichen.png)
 * Führe die Bilder_Namen_Vereineitlichen.exe Datei durch doppelklick aus.
 * Es öffnet sich ein Konsolen Fenster in dem du gefragt wirst, in welchem Pfad sich die Bilder befinden deren Namen du vereinheitlichen möchtest.
@@ -37,7 +37,7 @@ Gib diesen relativ zum Ausführort des Programmes an oder drücke einfach Enter 
 * Als nächstes wirst du nach dem gewünschten Ausgabeordner gefragt.
 Gib auch diesen relativ zum Ausführort des Programmes ein oder drücke Enter um den Standard Pfad ("output" Ordner) zu nutzen.	
 1. **Aufnahmedatum_Anpassen**<br>
-Die Anwendung des Programmes ist sehr einfach und in [diesem Video] (https://trustmeimanengineer.de/aufnahmedatum-von-bildern-anpassen/) erklärt.
+Die Anwendung des Programmes ist sehr einfach und in [diesem Video](https://trustmeimanengineer.de/aufnahmedatum-von-bildern-anpassen/) erklärt.
 ![Bilder Namen Vereinheitlichen](https://trustmeimanengineer.de/wp-content/uploads/Thumbnail_Bilder_Aufnahmedatum_Anpassen.png)
 * Führe die Aufnahmedatum_Anpassen.exe Datei durch doppelklick aus.
 * Es öffnet sich ein Konsolen Fenster in dem du gefragt wirst, in welchem Pfad sich die Bilder befinden deren Namen du vereinheitlichen möchtest.
@@ -46,7 +46,7 @@ Gib diesen relativ zum Ausführort des Programmes an oder drücke einfach Enter 
 Gib auch diesen relativ zum Ausführort des Programmes ein oder drücke Enter um den Standard Pfad ("output" Ordner) zu nutzen.
 * Anschließend kannst du den gewünschten Zeit Offset als Ganzzahl in Sekunden angeben. Um ein früheres Aufnahmedatum einzustellen kannst du einfach negative Zahlen angeben. 
 1. **Name_Als_Aufnahmedatum**<br>
-Die Anwendung des Programmes ist sehr einfach und in [diesem Video] (https://trustmeimanengineer.de/aufnahmedatum-zu-bildern-hinzufugen/) erklärt.
+Die Anwendung des Programmes ist sehr einfach und in [diesem Video](https://trustmeimanengineer.de/aufnahmedatum-zu-bildern-hinzufugen/) erklärt.
 ![Bilder Namen Vereinheitlichen](https://trustmeimanengineer.de/wp-content/uploads/Thumbnail_Bilder_Aufnahmedatum_Hinzufuegen.png)
 * Führe die Name_Als_Aufnahmedatum.exe Datei durch doppelklick aus.
 * Es öffnet sich ein Konsolen Fenster in dem du gefragt wirst, in welchem Pfad sich die Bilder befinden deren Namen du vereinheitlichen möchtest.
@@ -54,7 +54,7 @@ Gib diesen relativ zum Ausführort des Programmes an oder drücke einfach Enter 
 * Als nächstes wirst du nach dem gewünschten Ausgabeordner gefragt.
 Gib auch diesen relativ zum Ausführort des Programmes ein oder drücke Enter um den Standard Pfad ("output" Ordner) zu nutzen.
 1. **Dateigroesse_Reduzieren**<br>
-Die Anwendung des Programmes ist sehr einfach und in [diesem Video] (https://trustmeimanengineer.de/dateigrose-von-bilden-reduzieren/) erklärt.
+Die Anwendung des Programmes ist sehr einfach und in [diesem Video](https://trustmeimanengineer.de/dateigrose-von-bilden-reduzieren/) erklärt.
 ![Bilder Namen Vereinheitlichen](https://trustmeimanengineer.de/wp-content/uploads/Thumbnail_Dateigroesse_Von_Bildern_Reduzieren.png)
 * Führe die Dateigroesse_Reduzieren.exe Datei durch doppelklick aus.
 * Es öffnet sich ein Konsolen Fenster in dem du gefragt wirst, in welchem Pfad sich die Bilder befinden deren Namen du vereinheitlichen möchtest.
